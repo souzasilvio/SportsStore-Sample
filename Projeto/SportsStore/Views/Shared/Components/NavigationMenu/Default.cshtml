@@ -1,0 +1,23 @@
+﻿@model IEnumerable<string>
+<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        <li><a asp-area="" asp-controller="Product" asp-action="List" asp-route-category="" asp-route-productPage="1">Todos</a></li>
+        @foreach (string category in Model)
+    {
+        <li>
+            <a class="btn btn-block  @(category == ViewBag.SelectedCategory ? "btn-primary": "btn-secondary")"
+               asp-action="List"
+               asp-controller="Product"
+               asp-route-category="@category"
+               asp-route-productPage="1">
+                @category
+            </a>
+        </li>
+}
+        <li>
+            @await Component.InvokeAsync("CartSummary")
+        </li>
+        <li><a asp-area="" asp-controller="Account" asp-action="Login">Entrar</a></li>
+    </ul>
+</div>
+

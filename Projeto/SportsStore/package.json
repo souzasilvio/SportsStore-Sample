@@ -1,0 +1,9 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "devDependencies": {
+    "globalise": "0.0.5",
+    "jquery": "^3.3.1",
+    "jquery-validation": "^1.17.0"
+  }
+}

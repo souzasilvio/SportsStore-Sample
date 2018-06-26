@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace SportsStore.Models
+{
+    [Table("Category")]
+    public class Category
+    {
+        public int CategoryId { get; set; }
+        public string Nome { get; set; }
+    }
+}
